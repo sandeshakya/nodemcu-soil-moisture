@@ -10,19 +10,16 @@ RTC_DATA_ATTR int sensor_2_threshold;
 RTC_DATA_ATTR int time_to_sleep;
 RTC_DATA_ATTR bool device_updated;
 RTC_DATA_ATTR char *topic_char = (char *)malloc(sizeof(SENSOR_PUBLISH_TOPIC) + 8);
-RTC_DATA_ATTR char *ntpServer = "pool.ntp.org";
 RTC_DATA_ATTR bool isPumpEnabled;
 RTC_DATA_ATTR int sensors_data[NUMBER_OF_SENSORS];
-RTC_DATA_ATTR time_t now;
 RTC_DATA_ATTR int battery_level;
 RTC_DATA_ATTR char jsonObj[256];
 RTC_DATA_ATTR String topic;
 
-StaticJsonDocument<128> CreatePublishObj(int id, int timestamp, int value)
+StaticJsonDocument<128> CreatePublishObj(int id, int value)
 {
   StaticJsonDocument<128> doc;
   doc["id"] = id;
-  doc["timestamp"] = timestamp;
   doc["data"] = value;
   return doc;
 }

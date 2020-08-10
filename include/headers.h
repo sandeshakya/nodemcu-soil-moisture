@@ -30,11 +30,9 @@ extern RTC_DATA_ATTR int battery_level;
 extern RTC_DATA_ATTR char jsonObj[256];
 extern RTC_DATA_ATTR String topic;
 extern RTC_DATA_ATTR char *topic_char;
-extern RTC_DATA_ATTR char *ntpServer;
-extern RTC_DATA_ATTR time_t now;
 extern RTC_DATA_ATTR bool isPumpEnabled;
 
-StaticJsonDocument<128> CreatePublishObj(int id, int timestamp, int value);
+StaticJsonDocument<128> CreatePublishObj(int id, int value);
 void callback(char *topic, byte *payload, unsigned int length);
 void ConnectToWiFi();
 void ConnectToAWS();
