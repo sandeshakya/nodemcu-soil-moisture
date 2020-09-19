@@ -24,6 +24,7 @@ void setup()
     serializeJson(CreatePublishObj(sensors_id[i], sensors_data[i]), jsonObj);
     topic = SENSOR_PUBLISH_TOPIC + String(sensors_id[i]);
     topic.toCharArray(topic_char, topic.length());
+    client.publish(topic_char, jsonObj);
   }
   serializeJson(CreatePublishObj(1, battery_level), jsonObj);
   client.publish(BATTERY_LEVEL_TOPIC, jsonObj);

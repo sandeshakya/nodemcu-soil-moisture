@@ -19,7 +19,12 @@ Uses the following components:
 - NodeMCU ESP32 Module
 - Capacitive Soil Moisture Sensor x 2
 - Mini submersible Water Pump x 2
-- BJT Transistors x 2 (if using external power supply for water pump)
+- BJT Transistors x 2
+- Lithium Ion Battery
+- 5V Boost Converter
+- LED x 2
+
+![Diagram](circuit.png)
 
 ## Deployment
 

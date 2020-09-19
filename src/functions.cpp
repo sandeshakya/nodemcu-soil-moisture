@@ -67,7 +67,7 @@ tryagain:
   WiFi.disconnect(true);
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
   int tries = 0;
-  while (!WiFi.isConnected() && tries < 10)
+  while (!WiFi.isConnected() && tries < 5)
   {
     Serial.print(".");
     delay(500);
